@@ -1,8 +1,41 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1><%= name %></h1>
-</body>
-<%- include('_footer') -%>
+    <!-- <%- include('_header') -%> -->
+
+    <body class="user">
+        <nav id="nav-link">
+            <a class="link2" href="">My Face</a>
+            <a class="link2" href="">Home</a>
+            <a class="link2" href="/posts">Posts</a>
+            <a class="link2" href="/users">Users</a>
+            <a class="link2" href="/posts/create">+ New Post</a>
+        </nav>
+
+
+
+        <div class="container4">
+            <img id="covImage" src="<%=user.coverImageUrl%>" />
+
+            <img id="profImage" src="<%= user.profileImageUrl %>" />
+            <h1>
+                <%= user.name %>
+            </h1>
+        </div>
+        <div class="container5">
+            <% user.posts.forEach(function(post){ %>
+                <div class="subContainer5">
+                    <img class="userimage" src="<%=post.imageUrl %>" />
+                    <p>
+                        <%=post.message %>
+                    </p>
+                    <p>
+                        <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
+                    </p>
+                </div>
+                <% }); %>
+        </div>
+
+    </body>
+    <%- include('_footer') -%>
+
 </html>

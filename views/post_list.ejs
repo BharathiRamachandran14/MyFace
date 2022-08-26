@@ -1,15 +1,44 @@
 <html lang="en-gb">
 <%- include('_head') -%>
-<%- include('_header') -%>
-<body>
-<h1>Posts</h1>
-<ol>
-    <% postList.results.forEach(function(post) {%>
-        <li>
-            <%= post.message %> - <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss") %>
-        </li>
-    <% }); %>
-</ol>
-</body>
-<%- include('_footer') -%>
+    <%- include('_header') -%>
+
+        <body>
+            <h1 class="headings">Posts</h1>
+            <button id="colourChange">Change colour</button>
+            <ul>
+                <div class="container2">
+                    <% postList.results.forEach(function(post) {%>
+                        <li>
+                            <h3>
+                                <%= post.postedBy.username %>
+                            </h3>
+                            <img class="postImage" src="<%= post.imageUrl %>" alt="Image loading" />
+                            <div class="container1">
+                                <form method="post" action="/posts/<%=post.id %>/like/">
+                                    <button>Likes </button>
+                                </form>
+                                <form method="post" action="/posts/<%=post.id %>/dislike/">
+                                    <button>Dislike </button>
+                                </form>
+                            </div>
+                            <p>Liked by<span class="count">
+                                    <%=post.likedBy.length%>
+                                </span> Disliked by <span class="count">
+                                    <%=post.dislikedBy.length%>
+                                </span>
+                            </p>
+                            <p class="post">Posted at: <span class="count">
+                                    <%= format(post.createdAt, "yyyy-MM-dd HH:mm:ss" ) %>
+                                </span>
+                            </p>
+                            <p id="message">
+                                <%= post.message %>
+                            </p>
+                        </li>
+                        <% }); %>
+                </div>
+            </ul>
+        </body>
+        <%- include('_footer') -%>
+
 </html>

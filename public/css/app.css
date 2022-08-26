@@ -1,1 +1,251 @@
 /* Add your styles here. */
+.headings {
+    color: rgba(74, 17, 17, 0.716);
+    font-size: 30px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+h1 {
+    margin-top: 100px;
+    color: rgb(63, 12, 12);
+    font-size: 30px;
+    font-family: cursive;
+    text-align: left;
+}
+
+h3 {
+    color: brown;
+}
+
+button {
+    color: blue;
+    background-color: rgb(168, 168, 221);
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+p {
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(205, 21, 205);
+}
+
+button:hover {
+    color: purple;
+    background-color: rgb(207, 153, 207);
+
+}
+
+a {
+    text-decoration: none;
+    color: rgb(202, 202, 220);
+}
+
+
+.postImage {
+    max-width: 250px;
+    background: rgb(242, 228, 249);
+    padding: 10px;
+    border: 4px solid rgb(23, 1, 46);
+    border-radius: 10px;
+    margin-top: 5px
+}
+
+#message {
+    font-style: italic;
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(222, 166, 14);
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index:1 ;
+}
+
+#nav-link {
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    background-color: black;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.link2 {
+    color: white;
+}
+
+.link {
+    color: rgb(19, 18, 19);
+    background-color: whitesmoke;
+    padding: 5px;
+    border: 2px solid rgb(54, 33, 1);
+    border-radius: 5px 20px;
+}
+
+.container1 {
+    display: flex;
+
+}
+
+.count {
+    color: rgb(4, 69, 17);
+}
+
+.post {
+    color: rgb(5, 174, 174);
+}
+
+.container2 {
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around; */
+   display: grid;
+    grid-template-columns: repeat(4, 250px);
+    grid-gap: 100px; 
+
+}
+#colourChange{
+    padding: 10px;
+    transition: all .2s ease-in;
+    background-color: rgb(114, 109, 109);
+    color: black;
+    border: 1px double rgb(39, 6, 39);
+}
+#colourChange:hover{
+    background-color:rgb(241, 241, 233);
+    transition: all .2s ease-out;
+}
+
+.container3 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: flex-start;
+    list-style-type: none;
+    margin-left: auto;
+    position: relative;
+    z-index:0;
+    /* text-align: left; */
+
+    /* grid-template-columns: repeat(4, 250px);
+    grid-gap: 100px; */
+
+}
+
+.userprofileimage {
+
+    position: absolute;
+    left:0;
+    width: 125px;
+    height: 125px;
+    padding: 10px;
+    border: 1px solid rgb(248, 239, 240);
+    border-radius: 10px;
+
+}
+.list{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 200px 20px 200px;
+    border: 2px solid rgb(12, 6, 12);
+    background-color: rgb(248, 239, 240);
+    border-radius: 20px;
+}
+
+/* .subcontainer3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    
+} */
+
+.user {
+    background-color: rgb(16, 2, 44);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 1mm;
+    position: relative;
+
+}
+
+#profImage {
+
+    border-radius: 200px;
+    position: absolute;
+    top: 350px;
+    left: 250px;
+
+}
+
+#covImage {
+
+    display: block;
+    width: 80%;
+    align-self: center;
+
+
+}
+
+.container4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container5 {
+    margin-top: 150px;
+    display: grid;
+    grid-template-columns: repeat(4, 22.5%);
+    grid-gap: 30px;
+    grid-area: auto;
+    justify-content: center;
+    text-align: center;
+    color: white;
+
+}
+
+.userimage {
+
+    width: 300px;
+    height: 350px;
+
+}
+
+.subContainer5 {
+    align-content: center;
+    padding: 15px;
+    border: 3px solid slategrey;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-top: auto;
+
+
+}
+
+@media only screen and (max-width:800px) {
+    nav {
+        display: none;
+    }
+}
