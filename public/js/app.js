@@ -12,6 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
    const dropdown=document.getElementById("dropdown");
    
    dropdown.className="dropdown dropdown-open";
+  const x=document.getElementById("close");
+  x.addEventListener("click",function(){
+    dropdown.className="dropdown dropdown-close";
+  })
  })
  // You could separate the display:none property from the dropdown class, and put it in its own dropdown-closed class
  // Then every time the user opens or closes the menu you can switch the class name

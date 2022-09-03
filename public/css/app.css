@@ -314,17 +314,18 @@ nav {
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between; 
+  
    
+}
+.dropdown-close{
+    display:none;
+    cursor: pointer;
 }
 
 .close{
-    display: block;
-    padding:5px;
-    font-size: 20px;
-    align-items: left;
-    color: rgb(237, 237, 245);
-    background-color: rgb(11, 11, 12);
-    border: none;
-    border-radius: 5px;
-    margin: none;
+  right:0;
+ 
+} 
+.link3{
+    color: brown;
 }
